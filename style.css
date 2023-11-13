@@ -13,7 +13,7 @@ footer {
 }
 
 /* landingPage */
-/* #center {
+#loader {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -47,7 +47,7 @@ footer {
   }
 }
 
- Add animation to "page content" 
+/* Add animation to "page content"  */
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -76,64 +76,11 @@ footer {
     bottom: 0;
     opacity: 1;
   }
-} */
-#loader {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
 }
-.wave {
-  width: 3px;
-  height: 40px;
-  background: linear-gradient(45deg, #021728, #fff);
-  margin: 10px;
-  animation: wave 1s linear infinite;
-  border-radius: 20px;
-}
-.wave:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.wave:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.wave:nth-child(4) {
-  animation-delay: 0.3s;
-}
-.wave:nth-child(5) {
-  animation-delay: 0.4s;
-}
-.wave:nth-child(6) {
-  animation-delay: 0.5s;
-}
-.wave:nth-child(7) {
-  animation-delay: 0.6s;
-}
-.wave:nth-child(8) {
-  animation-delay: 0.7s;
-}
-.wave:nth-child(9) {
-  animation-delay: 0.8s;
-}
-.wave:nth-child(10) {
-  animation-delay: 0.9s;
-}
-
-@keyframes wave {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-.animate-bottom {
+*/ .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 2s;
   animation-name: animatebottom;
   animation-duration: 1s;
 }
@@ -163,6 +110,8 @@ footer {
   display: none;
   text-align: center;
 }
+
+/* landingpage */
 
 .landingPage {
   display: flex;
@@ -280,10 +229,10 @@ footer {
 .showcase4 {
   display: flex;
   flex-direction: column;
-
   width: 37%;
   color: #c4c4c4a5;
 }
+
 .html a {
   cursor: pointer;
   color: #c4c4c4a5;
@@ -295,12 +244,14 @@ footer {
 }
 
 /* workContainer */
+.showcase5 {
+  display: flex;
+  flex-direction: column;
+  width: 77%;
+  color: #c4c4c4a5;
+}
 .workContainer {
   gap: 20px;
-}
-.workText {
-  color: #fff;
-  margin-top: 1rem;
 }
 .workText h1 {
   font-size: 50px;
@@ -338,6 +289,35 @@ footer {
 }
 .workHover1 a:hover span:nth-child(2) {
   margin-left: 30px;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.contactLink {
+  display: none;
+}
+
+.work0,
+.work2 {
+  animation: 2s ease-out 0s 1 slideInRight;
+}
+
+.work1,
+.work3 {
+  animation: 1s ease-out 0s 1 slideInLeft;
 }
 
 @media (max-width: 600px) {
